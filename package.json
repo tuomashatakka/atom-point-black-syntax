@@ -1,0 +1,15 @@
+{
+  "name": "point-black-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "A dark / unobtrusive syntax theme compatible with any UI theme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/tuomashatakka/point-black-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
