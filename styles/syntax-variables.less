@@ -1,35 +1,13 @@
-/*
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-title      Syntax Variables                                    +
-project    nord-atom-syntax                                    +
-repository https://github.com/arcticicestudio/nord-atom-syntax +
-author     Arctic Ice Studio                                   +
-email      development@arcticicestudio.com                     +
-copyright  Copyright (C) 2017                                  +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-*/
-/*+---------+
-  + Imports +
-  +---------+*/
 @import "colors";
 
-/*+------------+
-  + Animations +
-  +------------+*/
 @syntax-transition-time: 400ms;
 
-/*+------+
-  + Base +
-  +------+*/
 @syntax-background-color:       @black;
 @syntax-text-color:             @text;
 @syntax-cursor-line:            fade(@dark, 25%);
 @syntax-selection-color:        fade(@dark, 35%);
 @syntax-selection-flash-color:  @nord8;
 
-/*+-----------------+
-  + Editor Elements +
-  +-----------------+*/
 @syntax-cursor-color:               @syntax-text-color;
 @syntax-wrap-guide-color:           @gray;
 @syntax-indent-guide-color:         @dark;
@@ -115,7 +93,7 @@ copyright  Copyright (C) 2017                                  +
 /*+--------+
   + Marker +
   +--------+*/
-@syntax-bracket-matcher-color:        @text;
+@syntax-bracket-matcher-color:        @primary;
 @syntax-result-marker-color:          fade(@nord8, 30%);
 @syntax-result-marker-color-selected: @nord8;
 
