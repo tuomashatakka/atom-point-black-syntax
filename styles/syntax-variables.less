@@ -6,59 +6,49 @@
 @syntax-text-color:             @text;
 @syntax-cursor-line:            fade(@dark, 25%);
 @syntax-selection-color:        fade(@dark, 35%);
-@syntax-selection-flash-color:  @nord8;
+@syntax-selection-flash-color:  @green;
 
 @syntax-cursor-color:               @syntax-text-color;
-@syntax-wrap-guide-color:           @gray;
-@syntax-indent-guide-color:         @dark;
+@syntax-wrap-guide-color:           fade(@dark, 33%);
+@syntax-indent-guide-color:         fade(@dark, 33%);
 @syntax-invisible-character-color:  @gray;
 
-/*+-----+
-  + Git +
-  +-----+*/
 @syntax-color-added:    @secondary-complement;
 @syntax-color-modified: @primary-complement;
 @syntax-color-removed:  @secondary;
-@syntax-color-renamed:  @nord8;
+@syntax-color-renamed:  @green;
 
-/*+--------+
-  + Gutter +
-  +--------+*/
 @syntax-gutter-text-color:                @syntax-gutter-text-color-subtle;
-@syntax-gutter-text-color-selected:       @nord6;
-@syntax-gutter-icon-color-folded:         @nord8;
+@syntax-gutter-text-color-selected:       @lite;
+@syntax-gutter-icon-color-folded:         @green;
 @syntax-gutter-text-color-subtle:         fade(@syntax-text-color, 40%);
 @syntax-gutter-background-color:          @syntax-background-color;
 @syntax-gutter-background-color-selected: transparent;
 
-/*+-------------------+
-  + Language Entities +
-  +-------------------+*/
-/*+--- Base ---+*/
 @syntax-color-comment:        @dark;
 @syntax-color-punctuation:    @gray;
 @syntax-color-variable:       @text;
 @syntax-color-snippet:        @text;
 
-@syntax-color-type:           @nord7;
-@syntax-color-class:          @nord7;
-@syntax-color-import:         @nord7;
-@syntax-color-selector:       @nord7;
-@syntax-color-constant:       @nord7;
-@syntax-color-attribute:      @nord7;
-@syntax-color-attribute-id:   @nord7;
+@syntax-color-type:           @static;
+@syntax-color-class:          @static;
+@syntax-color-import:         @static;
+@syntax-color-selector:       @static;
+@syntax-color-constant:       @static;
+@syntax-color-attribute:      @static;
+@syntax-color-attribute-id:   @static;
 
-@syntax-color-method:         @nord8;
-@syntax-color-function:       @nord8;
+@syntax-color-method:         @green;
+@syntax-color-function:       @green;
 
-@syntax-color-tag:            @nord9;
-@syntax-color-unit:           @nord9;
-@syntax-color-keyword:        @nord9;
-@syntax-color-embedded:       @nord9;
-@syntax-color-operator:       @nord9;
-@syntax-color-property:       @nord9;
-@syntax-color-primitive:      @nord9;
-@syntax-color-storage:        @nord9;
+@syntax-color-tag:            @purpl;
+@syntax-color-unit:           @purpl;
+@syntax-color-keyword:        @purpl;
+@syntax-color-embedded:       @purpl;
+@syntax-color-operator:       @purpl;
+@syntax-color-property:       @purpl;
+@syntax-color-primitive:      @purpl;
+@syntax-color-storage:        @purpl;
 
 @syntax-color-require:        @primary;
 @syntax-color-preprocessor:   @primary;
@@ -76,28 +66,23 @@
 
 @syntax-color-numeric:        @tertiary-complement;
 
-/*+--- Specific ---+*/
-@syntax-color-markup-quote:           @nord6;
-@syntax-color-css-property:           @nord7;
-@syntax-color-java-javadoc-tag:       @nord7;
-@syntax-color-markup-code:            @nord7;
-@syntax-color-markup-heading:         @nord8;
-@syntax-color-markup-link:            @nord8;
-@syntax-color-diff-separator:         @nord9;
-@syntax-color-java-bracket-angle:     @nord9;
-@syntax-color-markup-hr:              @nord9;
-@syntax-color-markup-heading-marker:  @nord9;
-@syntax-color-markup-punctuation:     @nord9;
+@syntax-color-markup-quote:           @lite;
+@syntax-color-css-property:           @static;
+@syntax-color-java-javadoc-tag:       @static;
+@syntax-color-markup-code:            @static;
+@syntax-color-markup-heading:         @green;
+@syntax-color-markup-link:            @green;
+@syntax-color-diff-separator:         @purpl;
+@syntax-color-java-bracket-angle:     @purpl;
+@syntax-color-markup-hr:              @purpl;
+@syntax-color-markup-heading-marker:  @purpl;
+@syntax-color-markup-punctuation:     @purpl;
 @syntax-color-markup-entity:          @tertiary;
 
-/*+--------+
-  + Marker +
-  +--------+*/
-@syntax-bracket-matcher-color:        @primary;
-@syntax-result-marker-color:          fade(@nord8, 30%);
-@syntax-result-marker-color-selected: @nord8;
+@syntax-bracket-matcher-color:        @text;
+@syntax-result-marker-color:          fade(@green, 30%);
+@syntax-result-marker-color-selected: @green;
 
-/*+-------+
-  + Sizes +
-  +-------+*/
-@syntax-border-radius: 4px;
+@syntax-cursor-weight:          1px;
+@syntax-border-radius:          4px;
+@syntax-bracket-matcher-margin: 2px;
