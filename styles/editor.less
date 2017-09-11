@@ -4,12 +4,23 @@ atom-text-editor {
   color: @syntax-text-color;
 
   .bracket-matcher .region {
-    border: 1px solid @syntax-bracket-matcher-color;;
-    box-sizing: border-box;
-  }
+    box-sizing:       content-box !important;
+    border-radius:    @syntax-border-radius / 2;
+    border: 0px solid @syntax-bracket-matcher-color;;
+    margin-left:     -@syntax-bracket-matcher-margin;
+    padding-left:     @syntax-bracket-matcher-margin;
+    padding-right:    @syntax-bracket-matcher-margin;
+    background-color:    fade(@syntax-bracket-matcher-color, 50%);
+    margin-top:         -@syntax-bracket-matcher-margin;
+    padding-top:         @syntax-bracket-matcher-margin;
+    border-bottom-width: @syntax-bracket-matcher-margin }
 
   .cursor {
-    border-left: 2px solid @syntax-cursor-color;
+    border-left:    @syntax-cursor-weight solid @syntax-cursor-color;
+    margin-top:    -@syntax-bracket-matcher-margin;
+    padding-top:    @syntax-bracket-matcher-margin;
+    padding-bottom: @syntax-bracket-matcher-margin;
+    box-sizing:     content-box;
   }
 
   .indent-guide {
@@ -17,24 +28,19 @@ atom-text-editor {
   }
 
   .invisible {
-    color: @syntax-invisible-character-color;
-  }
+    color: @syntax-invisible-character-color }
 
   .invisible-character {
-    color: @syntax-invisible-character-color;
-  }
+    color: @syntax-invisible-character-color }
 
   .line.cursor-line {
-    background-color: @syntax-cursor-line;
-  }
+    background-color: @syntax-cursor-line }
 
   .selection .region {
-    background-color: @syntax-selection-color;
-  }
+    background-color: @syntax-selection-color }
 
   .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
-  }
+    background-color: @syntax-wrap-guide-color }
 
   // Search
   .find-result .region.region.region,
@@ -64,52 +70,31 @@ atom-text-editor {
     padding-right: 0;
 
     .line-numbers {
-      background: transparent !important;
-    }
+      background: transparent !important }
 
     .line-number {
-      background: transparent;
-      color: @syntax-gutter-text-color;
       padding-right: 0;
+      padding-left:  1em;
+      background:    transparent;
+      color:         @syntax-gutter-text-color;
 
-      &.git-line-added {
-        color: @syntax-color-added;
-        border-left-color: @syntax-color-added;
-
-        &.cursor-line,
-        &.cursor-line-no-selection {
-          color: @syntax-color-added;
-          border-left-color: @syntax-color-added;
-        }
+      &[class*='git-line-'] {
+        border-left-width: 1px;
+        border-left-color: initial;
       }
 
-      &.git-line-modified {
-        color: @syntax-color-modified;
-        border-left-color: @syntax-color-modified;
-
-        &.cursor-line,
-        &.cursor-line-no-selection {
-          color: @syntax-color-modified;
-          border-left-color: @syntax-color-modified;
-        }
-      }
-
-      &.git-line-removed {
-        color: @syntax-color-removed;
-        border-left-color: @syntax-color-removed;
-
-        &.cursor-line,
-        &.cursor-line-no-selection {
-          color: @syntax-color-removed;
-          border-left-color: @syntax-color-removed;
-        }
+      &,
+      &.cursor-line,
+      &.cursor-line-no-selection {
+        &.git-line-added { color: @syntax-color-added }
+        &.git-line-modified { color: @syntax-color-modified }
+        &.git-line-removed { color: @syntax-color-removed }
       }
 
       &.cursor-line,
       &.cursor-line-no-selection {
         color: @syntax-gutter-text-color-selected;
-        font-weight: 600;
-      }
+        font-weight: 800 }
 
       .icon-right {
         opacity: 1.0;

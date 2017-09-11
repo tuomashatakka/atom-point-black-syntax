@@ -3,12 +3,16 @@ tuomas hatakka                                                                  
 
 .syntax--source {
   -webkit-font-smoothing: antialiased }
-.syntax--source, .syntax--none {
+
+.syntax--source,
+.syntax--none {
   color: @syntax-text-color }
 
 // Comments
 .syntax--comment {
-  color: @syntax-color-comment }
+  color: @syntax-color-comment;
+  font-style: italic;
+}
 .syntax--comment.syntax--markup.syntax--link {
   color: @syntax-color-comment;
   text-decoration: none;
@@ -128,7 +132,6 @@ tuomas hatakka                                                                  
   &.syntax--other.syntax--link {        color: @syntax-color-string }
   &.syntax--other.syntax--link {        text-decoration: none }
   &.syntax--other.syntax--link:hover {  text-decoration: underline }
-  & > .syntax--punctuation.syntax--definition.syntax--string {      color: @syntax-color-punctuation }
   &.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {  color: @syntax-color-regexp }
 
   &.syntax--unquoted { color: @syntax-text-color }
@@ -146,7 +149,11 @@ tuomas hatakka                                                                  
   &.syntax--language {      color: @syntax-color-keyword }
   &.syntax--parameter {     color: @syntax-color-variable }
   &.syntax--interpolation { color: @syntax-color-variable }
-  &.syntax--interpolation { font-style: italic }
+  &.syntax--this,
+  &.syntax--interpolation {
+    font-weight: 600;
+    line-height: inherit;
+    font-style: italic }
 }
 
 .syntax--underline { text-decoration: underline }

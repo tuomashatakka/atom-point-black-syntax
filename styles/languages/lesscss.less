@@ -1,22 +1,9 @@
-/*
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-title      Language LESSCSS                                    +
-project    nord-atom-syntax                                    +
-repository https://github.com/arcticicestudio/nord-atom-syntax +
-author     Arctic Ice Studio                                   +
-email      development@arcticicestudio.com                     +
-copyright  Copyright (C) 2017                                  +
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-[Language Packages]
-  > language-less (https://atom.io/packages/language-less)
-
-[References]
-LESSCSS
-  (http://lesscss.org)
-*/
 .syntax--source.syntax--css.syntax--less {
-  .syntax--mixin {
-    color: @syntax-color-function;
-  }
+
+  .syntax--mixin    { color: @syntax-color-function }
+  .syntax--variable { color: @syntax-color-variable }
+  > .syntax--variable:first-child,
+  > .syntax--variable:first-child .syntax--punctuation {
+    color: @syntax-color-property }
 }
