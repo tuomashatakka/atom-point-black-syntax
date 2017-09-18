@@ -2,87 +2,90 @@
 
 @syntax-transition-time: 400ms;
 
-@syntax-background-color:       @black;
-@syntax-text-color:             @text;
-@syntax-cursor-line:            fade(@dark, 25%);
-@syntax-selection-color:        fade(@dark, 35%);
-@syntax-selection-flash-color:  @green;
+@syntax-color-added:      @pb-success;
+@syntax-color-renamed:    @pb-warning;
+@syntax-color-removed:    @pb-error;
+@syntax-color-modified:   @pb-info;
 
-@syntax-cursor-color:               @syntax-text-color;
-@syntax-wrap-guide-color:           fade(@dark, 33%);
-@syntax-indent-guide-color:         fade(@dark, 33%);
-@syntax-invisible-character-color:  @gray;
+@syntax-color-illegal:    @pb-error;
+@syntax-color-deprecated: @pb-warning;
 
-@syntax-color-added:    @secondary-complement;
-@syntax-color-modified: @primary-complement;
-@syntax-color-removed:  @secondary;
-@syntax-color-renamed:  @green;
+@syntax-text-color:           @text;
+@syntax-cursor-color:         @syntax-text-color;
+@syntax-background-color:     @pb-black;
 
-@syntax-gutter-text-color:                @syntax-gutter-text-color-subtle;
-@syntax-gutter-text-color-selected:       @lite;
-@syntax-gutter-icon-color-folded:         @green;
-@syntax-gutter-text-color-subtle:         fade(@syntax-text-color, 40%);
-@syntax-gutter-background-color:          @syntax-background-color;
-@syntax-gutter-background-color-selected: transparent;
-
-@syntax-color-comment:        @dark;
-@syntax-color-punctuation:    @gray;
-@syntax-color-variable:       @text;
 @syntax-color-snippet:        @text;
+@syntax-color-comment:        @comment;
+@syntax-color-punctuation:    @punctuation;
 
-@syntax-color-type:           @static;
-@syntax-color-class:          @static;
+@syntax-color-string:         @string;
+@syntax-color-numeric:        @static;
+
 @syntax-color-import:         @static;
-@syntax-color-selector:       @static;
-@syntax-color-constant:       @static;
-@syntax-color-attribute:      @static;
+@syntax-color-require:        @static;
 @syntax-color-attribute-id:   @static;
 
-@syntax-color-method:         @green;
-@syntax-color-function:       @green;
+@syntax-color-type:           @entity;
+@syntax-color-class:          @entity;
 
-@syntax-color-tag:            @purpl;
-@syntax-color-unit:           @purpl;
-@syntax-color-keyword:        @purpl;
-@syntax-color-embedded:       @purpl;
-@syntax-color-operator:       @purpl;
-@syntax-color-property:       @purpl;
-@syntax-color-primitive:      @purpl;
-@syntax-color-storage:        @purpl;
+@syntax-color-variable:       @text;
+@syntax-color-property:       @property;
+@syntax-color-attribute:      @property;
+@syntax-color-function:       @function;
+@syntax-color-method:         mix(@property, @function, 60%);
 
-@syntax-color-require:        @primary;
-@syntax-color-preprocessor:   @primary;
+@syntax-color-tag:            @property;
+@syntax-color-embedded:       @property;
+@syntax-color-primitive:      @property;
+@syntax-color-preprocessor:   @property;
 
-@syntax-illegal:              @secondary;
+@syntax-color-unit:           @keyword;
+@syntax-color-keyword:        @keyword;
+@syntax-color-constant:       @keyword;
+@syntax-color-storage:        @keyword;
 
-@syntax-color-escape:         @tertiary;
-@syntax-color-annotation:     @tertiary;
-@syntax-color-placeholder:    @tertiary;
+@syntax-color-escape:         @operator;
+@syntax-color-selector:       @operator;
+@syntax-color-annotation:     @operator;
+@syntax-color-placeholder:    mix(@operator, @punctuation);
+@syntax-color-regexp:         mix(@operator, @punctuation);
+@syntax-color-operator:       mix(@operator, @punctuation, 25%);
 
-@syntax-deprecated:           @primary-complement;
-@syntax-color-regexp:         @primary-complement;
 
-@syntax-color-string:         @secondary-complement;
-
-@syntax-color-numeric:        @tertiary-complement;
-
-@syntax-color-markup-quote:           @lite;
 @syntax-color-css-property:           @static;
-@syntax-color-java-javadoc-tag:       @static;
+
 @syntax-color-markup-code:            @static;
-@syntax-color-markup-heading:         @green;
-@syntax-color-markup-link:            @green;
-@syntax-color-diff-separator:         @purpl;
-@syntax-color-java-bracket-angle:     @purpl;
-@syntax-color-markup-hr:              @purpl;
-@syntax-color-markup-heading-marker:  @purpl;
-@syntax-color-markup-punctuation:     @purpl;
-@syntax-color-markup-entity:          @tertiary;
+@syntax-color-markup-link:            @entity;
+@syntax-color-markup-entity:          @entity;
+@syntax-color-markup-hr:              @keyword;
+@syntax-color-markup-quote:           @keyword;
+@syntax-color-markup-heading:         @keyword;
+@syntax-color-markup-heading-marker:  @keyword;
+@syntax-color-markup-punctuation:     @punctuation;
 
-@syntax-bracket-matcher-color:        @text;
-@syntax-result-marker-color:          fade(@green, 30%);
-@syntax-result-marker-color-selected: @green;
+@syntax-color-diff-separator:         @keyword;
 
-@syntax-cursor-weight:          1px;
-@syntax-border-radius:          4px;
-@syntax-bracket-matcher-margin: 2px;
+@syntax-color-java-javadoc-tag:       @static;
+@syntax-color-java-bracket-angle:     @keyword;
+
+@syntax-cursor-line:                  fade(@pb-dark, 25%);
+@syntax-selection-color:              fade(@pb-dark, 35%);
+@syntax-wrap-guide-color:             fade(@pb-dark, 33%);
+@syntax-indent-guide-color:           fade(@pb-dark, 33%);
+@syntax-selection-flash-color:        @pb-info;
+@syntax-invisible-character-color:    @pb-gray;
+
+@syntax-gutter-text-color:            @syntax-gutter-text-color-subtle;
+@syntax-gutter-text-color-subtle:     fade(@syntax-text-color, 40%);
+@syntax-gutter-icon-color-folded:     @punctuation;
+@syntax-gutter-text-color-selected:   @syntax-selection-color;
+@syntax-gutter-background-color:      fade(@syntax-background-color, 25%);
+@syntax-gutter-background-color-selected: mix(@syntax-selection-color, @syntax-background-color);
+
+@syntax-result-marker-color:          fade(@pb-secondary, 30%);
+@syntax-result-marker-color-selected: @pb-secondary;
+@syntax-bracket-matcher-color:        @pb-secondary;
+
+@syntax-cursor-weight:                1px;
+@syntax-border-radius:                4px;
+@syntax-bracket-matcher-margin:       2px;
